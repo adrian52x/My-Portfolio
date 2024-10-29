@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,4 +18,23 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.layout {
+    /* width: min(1000pxm 100%);
+    margin: 0 auto;
+    columns: 3 300px;
+    column-gap: 1em; */
+    margin: 1em;
+    columns: 3 300px;
+    column-gap: 1em;
+}
+
+img{
+    border-color: red;
+    border-radius: 2px solid;
+    width: 100%;
+    margin-bottom: 1em;
+    
 }
