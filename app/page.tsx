@@ -1,31 +1,20 @@
-import Image from "next/image";
-
-
+import { projects } from "../app/data/projects";
+import ProjectsGrid from './components/ProjectsGrid';
 
 export default function Home() {
+
     return (
-        <div className="layout">
-                <div className="bg-white/10 rounded-lg mb-4">
-                    <br />text <br /> text <br /> text <br /> text <br /> text <hr /> <hr /> <br /> text <br /> <br />
-                </div>
-                    <img src="/travel.jpg" className="rounded-xl " 
-                    />
-        
-                    <img src="/node-download.jpg" className="rounded-xl" />
+        <>
+            <div className="layout">
+                    <div className="terminal bg-white/10 rounded-lg mb-4">
+                    {/* <div className="rounded-lg mb-4"> */}
+                        <br />text <br /> text <br /> text <br /> text <br /> text <hr /> <hr /> <br /> text <br /> <br />
+                    </div>
+                    
+                    <ProjectsGrid projects={projects}/>
 
-
-                    <img src="/npm-veri.jpg" className="rounded-xl " />
-                    <img src="/manage-app.png" className="rounded-xl " />
-
-                    <img src="/texteditor.jpg" className="rounded-xl" />
-                    <img src="/cj.png" className="rounded-xl" />
-
-                    <img src="/travel.jpg" className="rounded-xl " />
-
-                    <img src="/ss.png" className="rounded-xl " />
-                    <img src="/manage-app.png" className="rounded-xl " />
-
-        </div>
+            </div>
+        </>
     );
 
     

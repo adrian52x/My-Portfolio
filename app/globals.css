@@ -16,25 +16,98 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  /* background: var(--background); */
   font-family: Arial, Helvetica, sans-serif;
+
+  /* background: linear-gradient(
+    135deg,
+    #000000 0%,
+    #333333 25%,
+    #666666 50%,
+    #999999 75%,
+    #808080 100%
+  ); */
+  background: 
+    linear-gradient(217deg, rgba(19, 27, 49, 0.8), rgba(17,24,39,0) 70.71%),
+    linear-gradient(127deg, rgba(55,65,81,0.8), rgba(17,24,39,0) 70.71%),
+    linear-gradient(336deg, rgba(17,24,39,0.8), rgba(0,0,0,0) 70.71%),
+    radial-gradient(circle at 50% 50%, #4B5563, #1F2937);
+  background-attachment: fixed;
 }
 
 
 .layout {
-    /* width: min(1000pxm 100%);
-    margin: 0 auto;
-    columns: 3 300px;
-    column-gap: 1em; */
     margin: 1em;
     columns: 3 300px;
     column-gap: 1em;
 }
 
-img{
-    border-color: red;
-    border-radius: 2px solid;
-    width: 100%;
+.terminal {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 1);
+}
+
+.project{
     margin-bottom: 1em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 1em rgba(0,0,0,1);
+
+    position: relative;
+    overflow: hidden;
+    
     
 }
+
+.project img {
+  border-radius: 0.5em;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.project:hover img {
+  transform: scale(1.2);
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, black, transparent);
+  opacity: 0;
+  transition: opacity 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project:hover .content {
+  opacity: 1;
+}
+
+.content h1 {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.content button {
+  background: transparent;
+  color: rgb(255, 255, 255);
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 0.5rem; /* Adjust the radius as needed */
+}
+
+
+
+
+
+
+
