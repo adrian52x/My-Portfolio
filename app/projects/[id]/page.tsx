@@ -3,28 +3,39 @@ import { projects } from '@/app/data/projects';
 
 
 interface ProjectPageProps {
-    params: {
-        projectId: string;
-    };
+    params: Promise<{
+        id: string;
+    }>;
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
 
-    const { projectId } = await params;
-    console.log(projectId);
+    const { id } = await params;
+    console.log(id);
     
-    const project = projects.find((project) => project.id === projectId);
+    const project = projects.find((project) => project.id === id);
 
     return (
-        <BrowserFrame title="Example Website">
-            <h1 className="text-2xl font-bold mb-4">Welcome to My Website</h1>
-            <p className="text-gray-600">This is some sample content inside the Mac browser frame.</p>
+        <>
             {project ? (
-                <img key={project.id} src={project.image} />
+                <>
+                    <BrowserFrame title={project.title}>
+                        <img className="w-full" key={project.id} src={project.image} />
+                    </BrowserFrame>
+
+                    {project.video && (
+                        <BrowserFrame title={project.title}>
+                            <video className="w-full" controls>
+                                <source src={project.video} type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </BrowserFrame>
+                    )}
+                </>
             ) : (
-                <p>Project not found</p>
+                <h1 className="text-2xl font-bold mb-4">Project not found</h1>
             )}
-        </BrowserFrame>
+        </>
     );
 
     

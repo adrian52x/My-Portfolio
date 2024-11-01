@@ -15,7 +15,7 @@ export default function BrowserFrame({
 }: MacBrowserFrameProps) {
   return (
     <div className="m-8 flex items-center justify-center">
-      <div className={`max-w-4xl w-full mx-auto rounded-lg overflow-hidden shadow-2xl ${gradientFrom} ${gradientTo} bg-gradient-to-br p-[2px]`}>
+      <div className={`max-w-6xl w-full mx-auto rounded-lg overflow-hidden shadow-2xl ${gradientFrom} ${gradientTo} bg-gradient-to-br p-[2px]`}>
         <div className="bg-gray-800 rounded-lg overflow-hidden">
           {/* Title bar */}
           <div className="bg-gray-700 px-4 py-2 flex items-center justify-between">
@@ -29,7 +29,7 @@ export default function BrowserFrame({
           </div>
           
           {/* Content area */}
-          <div className="bg-gray-800 p-6">
+          <div className="bg-gray-800">
             {children}
           </div>
         </div>
