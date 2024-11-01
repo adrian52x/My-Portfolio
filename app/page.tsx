@@ -7,7 +7,6 @@ export default function Home() {
         <>
             <div className="layout">
                     <div className="terminal bg-white/10 rounded-lg mb-4">
-                    {/* <div className="rounded-lg mb-4"> */}
                         <br />text <br /> text <br /> text <br /> text <br /> text <hr /> <hr /> <br /> text <br /> <br />
                     </div>
                     
