@@ -14,7 +14,7 @@ const ProjectCard = ({ project }: { project: ProjectParams }) => {
 
     return (
         <div className="project">
-            <img key={project.id} src={project.image[0]}  />
+            <img key={project.id} src={project.mainImage}  />
             <div className="content">
                 <h1>{project.title}</h1>
                 <button onClick={() => viewDetailsButton()}>View details</button>

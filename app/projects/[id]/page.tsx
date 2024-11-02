@@ -21,34 +21,10 @@ const technologyIcons: { [key: string]: React.ComponentType<{ className?: string
 export default async function ProjectPage({ params }: ProjectPageProps) {
     
     const { id } = await params;
-    console.log(id);
     
     const project = projects.find((project) => project.id === id);
 
     return (
-        // <>
-        //     {project ? (
-        //         <>
-        //             <BrowserFrame title={project.title}>
-        //                 <img className="w-full max-h-[80vh]" key={project.id} src={project.image} />
-        //             </BrowserFrame>
-
-        //             {project.video && (
-        //                 <>
-        //                 <BrowserFrame>
-        //                     <video className="w-full" controls>
-        //                         <source src={project.video} type="video/mp4" />
-        //                         Your browser does not support the video tag.
-        //                     </video>
-        //                 </BrowserFrame>
-        //                 </>
-        //             )}
-        //         </>
-        //     ) : (
-        //         <h1 className="text-2xl font-bold mb-4">Project not found</h1>
-        //     )}
-        // </>
-
     <div className="relative flex justify-between py-10 px-4">
 
         {/* Back Button */}
@@ -85,7 +61,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 )}
 
                 
-                {project?.image?.map((img, index) => (
+                {project?.images?.map((img, index) => (
                     <BrowserFrame key={index} title={project.title}>
                         <img className="w-full max-h-[80vh]" src={img} />
                     </BrowserFrame>
@@ -123,4 +99,4 @@ function TechIcon({ Icon, name }: TechIconProps) {
         <span className="text-sm text-gray-300">{name}</span>
       </div>
     )
-  }
+}

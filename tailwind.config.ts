@@ -7,15 +7,15 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      boxShadow: {
-        'custom': '2px 4px 12px rgba(0, 0, 0, 1)',
-      },
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-    },
+  	extend: {
+  		boxShadow: {
+  			custom: '2px 4px 30px rgba(0, 0, 0, 1)'
+  		},
+  		colors: {
+  			background: 'var(--background)',
+  			foreground: 'var(--foreground)'
+  		},
+  	}
   },
   plugins: [],
 };
