@@ -37,14 +37,14 @@ export const projects: ProjectParams[] = [
     {
         id: "5",
         title: "Text Editor",
-        image: ["/images/texteditor.jpg", "/images/texteditor.jpg"],
+        image: ["/images/floorplan-dev-steps.jpg", "/images/texteditor.jpg"],
         video: "/videos/floor-plan.mp4",
         technologies: ["React", "Tailwind"]
     },
     {
         id: "6",
         title: "CJ",
-        image: ["/images/cj.png", "/images/cj.png"],
+        image: ["/images/cj.png"],
         technologies: ["React", "Node.js"]
     },
     {

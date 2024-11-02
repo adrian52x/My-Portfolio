@@ -1,6 +1,6 @@
 import React from 'react'
 
-interface MacBrowserFrameProps {
+interface BrowserFrameProps {
   title?: string
   children: React.ReactNode
   video?: boolean
@@ -10,7 +10,7 @@ export default function BrowserFrame({
   title = '', 
   children,
   video = false, 
-}: MacBrowserFrameProps) {
+}: BrowserFrameProps) {
   //${gradientFrom} ${gradientTo} bg-gradient-to-br
   return (
     <>
@@ -37,6 +37,7 @@ export default function BrowserFrame({
     </div>
     
 
+    {/* Styled HR - to separate frames */}
     <div className="flex justify-center py-10">
         <div className="w-full max-w-7xl flex items-center">
           <div className="flex-grow h-0.5 bg-gray-500"></div>
