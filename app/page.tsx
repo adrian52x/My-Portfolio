@@ -3,6 +3,7 @@ import ProjectsGrid from './components/ProjectsGrid';
 
 import { Roboto, Quantico } from 'next/font/google'
 import TypingEffect from "./components/TypingEffect";
+import TerminalInput from "./components/terminal-Input";
  
 const quantico = Quantico({
   weight: '400',
@@ -27,21 +28,21 @@ export default function Home() {
                         
                         <div className="terminal-content p-4 space-y-4">
                             <div className="flex space-x-2">
-                                <div>&gt;</div> 
+                                <div>~/&#36;</div> 
                                 <TypingEffect phrases={['Adrian Enachi', 'Software Engineer']} />
                             </div>
                             <div className="location">
-                                <div className="flex space-x-2">
-                                    <div>&gt;</div> 
-                                    <div>Adrian.currentLocation</div>
+                                <div className="flex">
+                                    <div>~/</div> 
+                                    <div>currentLocation&#36;</div>
                                 </div>
                                 <div className="text-orange-300">"Copenhagen, DK"</div>
                             </div>
 
                             <div className="contactInfo">
-                                <div className="flex space-x-2">
-                                    <div>&gt;</div> 
-                                    <div>Adrian.contactInfo</div>
+                                <div className="flex">
+                                    <div>~/</div> 
+                                    <div>contactInfo&#36;</div>
                                 </div>
                                 <div className="text-orange-300 flex space-x-2">
                                     &#91;
@@ -58,27 +59,43 @@ export default function Home() {
                                 </div>
                             </div>
 
-                            <div className="interests">
-                                <div className="flex space-x-2">
-                                    <div>&gt;</div> 
-                                    <div>Adrian.interests</div>
+                            {/* <div className="interests">
+                                <div className="flex">
+                                    <div>~/</div> 
+                                    <div>interests&#36;</div>
                                 </div>
                                 <div className="text-orange-300">&#91;"text, text, text, text"&#93;</div>
-                            </div>
+                            </div> */}
 
                             <div className="education">
-                                <div className="flex space-x-2">
-                                    <div>&gt;</div> 
-                                    <div>Adrian.education</div>
+                                <div className="flex">
+                                    <div>~/</div> 
+                                    <div>education&#36;</div>
                                 </div>
-                                <div className="text-orange-300">&#91;"text, text, text, text",</div>
-                                <div className="text-orange-300">"text, text, text, text"&#93;</div>
-
+                                <div className="text-orange-300">&#91;"AP Computer Science - Københavns Erhvervsakademi"&#93;</div>
+                                <div className="text-orange-300">"Top Up Web Development - Copenhagen Business Academy"&#93;</div>
                             </div>
 
+                            <div className="skills">
+                                <div className="flex">
+                                    <div>~/</div> 
+                                    <div>mainSkills&#36;</div>
+                                </div>
+                                <div className="text-orange-300">&#91;"Software Development", "Testing", "DevOps", "Linux", "System administration", "Networking" &#93;</div>
+                            </div>
+                            <hr />
+                            
+                            <TerminalInput/>
+                            {/* <div className="terminal-input">
+                                <span>(type ls)</span>
+                                <div className="flex">
+                                    <div>~/</div> 
+                                    <div>&#36; |</div>
+                                    <input className="bg-transparent focus:outline-none focus:border-none caret-transparent hover:cursor-pointer" type="text" />
+                                </div>
+                            </div> */}
 
                             
-                            <br /> text <br /> text <br /> text <br /> text <hr /> <hr /> <br /> text <br /> <br />
                         </div>
                         
                     </div>
