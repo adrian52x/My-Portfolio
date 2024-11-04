@@ -37,6 +37,7 @@ export default function Home() {
                                 </div>
                                 <div className="text-orange-300">"Copenhagen, DK"</div>
                             </div>
+
                             <div className="contactInfo">
                                 <div className="flex space-x-2">
                                     <div>&gt;</div> 
@@ -56,8 +57,28 @@ export default function Home() {
                                     &#93;
                                 </div>
                             </div>
+
+                            <div className="interests">
+                                <div className="flex space-x-2">
+                                    <div>&gt;</div> 
+                                    <div>Adrian.interests</div>
+                                </div>
+                                <div className="text-orange-300">&#91;"text, text, text, text"&#93;</div>
+                            </div>
+
+                            <div className="education">
+                                <div className="flex space-x-2">
+                                    <div>&gt;</div> 
+                                    <div>Adrian.education</div>
+                                </div>
+                                <div className="text-orange-300">&#91;"text, text, text, text",</div>
+                                <div className="text-orange-300">"text, text, text, text"&#93;</div>
+
+                            </div>
+
+
                             
-                             <br /> text <br /> text <br /> text <br /> text <hr /> <hr /> <br /> text <br /> <br />
+                            <br /> text <br /> text <br /> text <br /> text <hr /> <hr /> <br /> text <br /> <br />
                         </div>
                         
                     </div>
