@@ -45,8 +45,6 @@ body {
 
 .terminal {
   color: white;
-  text-align: center;
-  padding: 2rem;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 1);
