@@ -1,12 +1,12 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 
-import { projects } from '../data/projects';
+import { projects, ProjectParams } from '../data/projects';
 
 
 const TerminalInput = () => {
     const [inputValue, setInputValue] = useState('');
-    const [output, setOutput] = useState('');
+    const [output, setOutput] = useState<string | ProjectParams[]>([]);
     const [isFocused, setIsFocused] = useState(false);
   
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -15,12 +15,21 @@ const TerminalInput = () => {
   
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
       if (e.key === 'Enter') {
-        if (inputValue.trim() === 'ls') {
-          setOutput(projects.map((project) => project.title).join('\n'));
-        } else {
-          setOutput(`command not found: ${inputValue}`);
-        }
-        setInputValue('');
+          const command = inputValue.trim();
+          switch (command) {
+              case 'ls':
+                  setOutput(projects);
+                  break;
+              case 'date':
+                    setOutput(new Date().toString());
+                    break;    
+              case 'clear':
+                  setOutput([]);
+                  break;
+              default:
+                  setOutput(`command not found: ${inputValue}`);
+          }
+          setInputValue('');
       }
     };
 
@@ -41,7 +50,7 @@ const TerminalInput = () => {
   
     return (
         <div className="terminal-input">
-            <span>(type ls)</span>
+            <span className='italic'>(commands: ls, date, clear)</span>
             <div className="flex">
                 <div>~/</div>
                 <div>&#36;</div>
@@ -57,7 +66,20 @@ const TerminalInput = () => {
                 />
                 
             </div>
-            <pre className="text-orange-300 mt-2 whitespace-pre-wrap">{output}</pre>
+            {/* <pre className="text-orange-300 mt-2 whitespace-pre-wrap">{output}</pre> */}
+            <pre className="text-orange-300 mt-2 whitespace-pre-wrap grid grid-cols-2 gap-x-6">
+                {Array.isArray(output) ? (
+                    output.map((project: { id: string; title: string }) => (
+                        <div key={project.id}>
+                            <a href={`/projects/${project.id}`} target="_blank" className="text-blue-500 hover:underline">
+                                {project.title}
+                            </a>
+                        </div>
+                    ))
+                ) : (
+                    output
+                )}
+            </pre>
         </div>
     );
 };
