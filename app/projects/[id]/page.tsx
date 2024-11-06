@@ -1,7 +1,7 @@
 import BrowserFrame from '@/app/components/BrowserFrame';
 import { projects } from '@/app/data/projects';
-import { FaReact, FaNodeJs, FaDatabase, FaArrowLeft } from 'react-icons/fa'
-import { SiTailwindcss } from 'react-icons/si'
+import { FaReact, FaNodeJs, FaDatabase, FaArrowLeft, FaJsSquare, FaSync, FaExchangeAlt  } from 'react-icons/fa'
+import { SiTailwindcss, SiExpress, SiMongodb, SiNextdotjs, SiStripe, SiSvelte, SiVuedotjs, SiNestjs  } from 'react-icons/si'
 import Link from 'next/link';
 import ScrollToTopButton from '@/app/components/ScrollToTopButton';
 
@@ -15,7 +15,17 @@ const technologyIcons: { [key: string]: React.ComponentType<{ className?: string
     "React": FaReact,
     "Node.js": FaNodeJs,
     "Tailwind": SiTailwindcss,
-    "Database": FaDatabase
+    "Database": FaDatabase,
+    "JavaScript": FaJsSquare,
+    "Express": SiExpress,
+    "MongoDB": SiMongodb,
+    "Next.js": SiNextdotjs,
+    "Stripe": SiStripe,
+    "Webhooks": FaSync,
+    "Svelte": SiSvelte,
+    "Vue.js": SiVuedotjs,
+    "API": FaExchangeAlt,
+    "Nest.js": SiNestjs
 };
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
@@ -51,14 +61,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
             {/* BrowserFrame Section */}
             <div className="w-full lg:w-3/5">
-                {project?.video && (
-                    <BrowserFrame title={project.title}>
+                {project?.videos?.map((video, index) => (
+                    <BrowserFrame key={index} title={project.title}>
                         <video className="w-full min-h-[300px]" controls>
-                            <source src={project.video} type="video/mp4" />
+                            <source src={video} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                     </BrowserFrame>
-                )}
+                ))}
 
                 
                 {project?.images?.map((img, index) => (
