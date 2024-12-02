@@ -11,7 +11,7 @@ export interface ProjectParams {
 
 export const projects: ProjectParams[] = [
     {
-        id: "7",
+        id: "1",
         title: "Parking Finder App (Concept)",
         mainImage: "/images/ParkingFinderApp/OAK-home.jpg",
         images: ["/images/ParkingFinderApp/OAK-home.jpg", "/images/ParkingFinderApp/OAK-map.jpg", "/images/ParkingFinderApp/OAK-map2.jpg", "/images/ParkingFinderApp/OAK-parkingSlots.jpg", "/images/ParkingFinderApp/OAK-profile.jpg"],
@@ -19,7 +19,7 @@ export const projects: ProjectParams[] = [
         comments: ["Period: 2022", "Concept project for a parking finder app"]
     },
     {
-        id: "9",
+        id: "2",
         title: "Neural-network Image classifier",
         mainImage: "/images/image-classifier.png",
         images: ["/images/image-classifier.png"],
@@ -29,7 +29,7 @@ export const projects: ProjectParams[] = [
 
 
     {
-        id: "5",
+        id: "3",
         title: "Floor Plan (AGC Biologics)",
         isImportant: true,
         mainImage: "/images/floorplan/floorplan-main.jpg",
@@ -40,7 +40,7 @@ export const projects: ProjectParams[] = [
     },
 
     {
-        id: "1",
+        id: "4",
         title: "Travel Destinations",
         mainImage: "/images/travel/travel.jpg",
         images: ["/images/travel/travel.jpg", "/images/travel/travel-login.png", "/images/travel/travel-add.png"],
@@ -49,7 +49,7 @@ export const projects: ProjectParams[] = [
         comments: ["Period: 2024", "Web app where users can save their travel destinations"]
     },
     {
-        id: "3",
+        id: "5",
         title: "Simple Pokemon App",
         mainImage: "/images/pokemonApp/1.png",
         images: ["/images/pokemonApp/1.png", "/images/pokemonApp/2.png"],
@@ -57,7 +57,7 @@ export const projects: ProjectParams[] = [
         comments: ["Period: 2021", "Simple Pokemon app built in Vue.js for an interview task"]
     },
     {
-        id: "4",
+        id: "6",
         title: "Ask & Share (Startup)",
         isImportant: true,
         mainImage: "/images/ask-share/askshare-mentors.png",
@@ -67,7 +67,7 @@ export const projects: ProjectParams[] = [
         comments: ["Period: 2024", "Project stopped at MVP stage", "This project is a platform for mentors and mentees to connect and share knowledge", "Based on airbnb business model"]
     },
     {
-        id: "8",
+        id: "7",
         title: "DAOS",
         mainImage: "/images/daos/DAOS-main.png",
         images: ["/images/daos/DAOS-main.png", "/images/daos/DAOS-sog.png"],
@@ -75,7 +75,7 @@ export const projects: ProjectParams[] = [
         comments: ["Period: now (in progress)", "DAOS (Dansk Amatørorkester samvirke)"]
     },
     {
-        id: "2",
+        id: "8",
         title: "My first E-Commerce",
         mainImage: "/images/e-com/1.png",
         images: ["/images/e-com/1.png", "/images/e-com/2.png", "/images/e-com/3.png", "/images/e-com/4.png", "/images/e-com/5.png"],
@@ -84,7 +84,7 @@ export const projects: ProjectParams[] = [
     },
 
     {
-        id: "10",
+        id: "9",
         title: "C19 Test Center",
         mainImage: "/images/no-img.jpg",
         images: ["/images/c19.png"],
