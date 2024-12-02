@@ -44,7 +44,7 @@ export default function Home() {
                                     <div>~/</div> 
                                     <div>contactInfo&#36;</div>
                                 </div>
-                                <div className="text-orange-300 flex space-x-2">
+                                <div className="text-orange-300 flex flex-wrap space-x-2">
                                     &#91;
                                     <a href="mailto:enachi.adrian52@gmail.com" className="block hover:underline">
                                         "enachi.adrian52@gmail.com"

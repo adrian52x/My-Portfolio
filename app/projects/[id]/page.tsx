@@ -1,7 +1,7 @@
 import BrowserFrame from '@/app/components/BrowserFrame';
 import { projects } from '@/app/data/projects';
-import { FaReact, FaNodeJs, FaDatabase, FaArrowLeft, FaJsSquare, FaSync, FaExchangeAlt  } from 'react-icons/fa'
-import { SiTailwindcss, SiExpress, SiMongodb, SiNextdotjs, SiStripe, SiSvelte, SiVuedotjs, SiNestjs  } from 'react-icons/si'
+import { FaReact, FaNodeJs, FaDatabase, FaArrowLeft, FaJsSquare, FaSync, FaExchangeAlt, FaJava, FaLeaf, FaPython  } from 'react-icons/fa'
+import { SiTailwindcss, SiExpress, SiMongodb, SiNextdotjs, SiStripe, SiSvelte, SiVuedotjs, SiNestjs, SiTensorflow, SiKeras  } from 'react-icons/si'
 import Link from 'next/link';
 import ScrollToTopButton from '@/app/components/ScrollToTopButton';
 
@@ -25,7 +25,12 @@ const technologyIcons: { [key: string]: React.ComponentType<{ className?: string
     "Svelte": SiSvelte,
     "Vue.js": SiVuedotjs,
     "API": FaExchangeAlt,
-    "Nest.js": SiNestjs
+    "Nest.js": SiNestjs,
+    "Java Spring Boot": FaJava,
+    "Thymeleaf": FaLeaf,
+    "Python": FaPython,
+    "TensorFlow": SiTensorflow,
+    "Keras": SiKeras,
 };
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
