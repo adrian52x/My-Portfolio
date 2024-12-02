@@ -11,8 +11,6 @@ const ProjectCard = ({ project }: { project: ProjectParams }) => {
         router.push(`/projects/${project.id}`);
     };
 
-    const isImportant = true;
-
     return (
         <div className={`project shadow-md hover:shadow-orange-400 transition-shadow duration-300  ${project.isImportant ? 'shadow-emerald-700' : ''}`}>
             <img key={project.id} src={project.mainImage}  />

@@ -11,9 +11,7 @@ interface BrowserFrameProps {
 export default function BrowserFrame({ 
   title = '', 
   children,
-  video = false, 
 }: BrowserFrameProps) {
-  //${gradientFrom} ${gradientTo} bg-gradient-to-br
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImgSrc, setModalImgSrc] = useState('');
@@ -50,7 +48,7 @@ export default function BrowserFrame({
                     
                     {React.Children.map(children, (child) => {
                         if (React.isValidElement(child) && child.type === 'img') {
-                        return React.cloneElement(child as React.ReactElement<any>, {
+                        return React.cloneElement(child as React.ReactElement<React.ImgHTMLAttributes<HTMLImageElement>>, {
                             title: 'Click to enlarge',
                             onClick: () => openModal(child.props.src),
                         });

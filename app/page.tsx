@@ -1,7 +1,7 @@
 import { projects } from "../app/data/projects";
 import ProjectsGrid from './components/ProjectsGrid';
 
-import { Roboto, Quantico } from 'next/font/google'
+import { Quantico } from 'next/font/google'
 import TypingEffect from "./components/TypingEffect";
 import TerminalInput from "./components/terminal-Input";
  
