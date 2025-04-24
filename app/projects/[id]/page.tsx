@@ -3,7 +3,6 @@ import { projects } from '@/app/data/projects';
 import { FaReact, FaNodeJs, FaDatabase, FaArrowLeft, FaJsSquare, FaSync, FaExchangeAlt, FaJava, FaLeaf, FaPython, FaHtml5, FaCss3  } from 'react-icons/fa'
 import { SiTailwindcss, SiExpress, SiMongodb, SiNextdotjs, SiStripe, SiSvelte, SiVuedotjs, SiNestjs, SiTensorflow, SiKeras, SiSupabase  } from 'react-icons/si'
 import Link from 'next/link';
-import Image from 'next/image';
 import ScrollToTopButton from '@/app/components/ScrollToTopButton';
 
 interface ProjectPageProps {
