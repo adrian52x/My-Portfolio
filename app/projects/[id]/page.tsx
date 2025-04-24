@@ -1,8 +1,9 @@
 import BrowserFrame from '@/app/components/BrowserFrame';
 import { projects } from '@/app/data/projects';
-import { FaReact, FaNodeJs, FaDatabase, FaArrowLeft, FaJsSquare, FaSync, FaExchangeAlt, FaJava, FaLeaf, FaPython  } from 'react-icons/fa'
-import { SiTailwindcss, SiExpress, SiMongodb, SiNextdotjs, SiStripe, SiSvelte, SiVuedotjs, SiNestjs, SiTensorflow, SiKeras  } from 'react-icons/si'
+import { FaReact, FaNodeJs, FaDatabase, FaArrowLeft, FaJsSquare, FaSync, FaExchangeAlt, FaJava, FaLeaf, FaPython, FaHtml5, FaCss3  } from 'react-icons/fa'
+import { SiTailwindcss, SiExpress, SiMongodb, SiNextdotjs, SiStripe, SiSvelte, SiVuedotjs, SiNestjs, SiTensorflow, SiKeras, SiSupabase  } from 'react-icons/si'
 import Link from 'next/link';
+import Image from 'next/image';
 import ScrollToTopButton from '@/app/components/ScrollToTopButton';
 
 interface ProjectPageProps {
@@ -31,6 +32,9 @@ const technologyIcons: { [key: string]: React.ComponentType<{ className?: string
     "Python": FaPython,
     "TensorFlow": SiTensorflow,
     "Keras": SiKeras,
+    "HTML": FaHtml5,
+    "CSS": FaCss3,
+    "Supabase": SiSupabase,
 };
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
@@ -57,10 +61,22 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             {/* Technologies Section */}
             <div className="w-full lg:w-1/6  rounded-lg p-6 ">
                 <div className="grid grid-cols-4 gap-14">
-                {project?.technologies?.map((tech) => {
-                    const Icon = technologyIcons[tech];
-                    return <TechIcon key={tech} Icon={Icon} name={tech}  />;
-                })}
+                    {project?.technologies?.map((tech) => {
+                        const Icon = technologyIcons[tech];
+                        return <TechIcon key={tech} Icon={Icon} name={tech}  />;
+                    })}
+
+                    {project?.link && (
+                        <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-400 hover:underline"
+                        >
+                            Project Demo
+                        </a>
+                    )}
+
                 </div>
             </div>
 
@@ -78,13 +94,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 
                 {project?.images?.map((img, index) => (
                     <BrowserFrame key={index} title={project.title}>
+                        {/* <Image key={index} src={img} alt={project.title} width={1200} height={300} /> */}
                         <img className="w-full max-h-[80vh]" src={img} />
                     </BrowserFrame>
                 ))}
             </div>
 
         
+            
 
+            
             {/* Comment Section */}
             {project?.comments && (
                 <div className="w-full lg:w-1/6 bg-gray-800 rounded-lg p-6 shadow-lg">
@@ -96,6 +115,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     ))}
                 </div>
             )}
+
+            
         </div>
     </div>
  

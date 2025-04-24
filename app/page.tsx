@@ -4,6 +4,8 @@ import ProjectsGrid from './components/ProjectsGrid';
 import { Quantico } from 'next/font/google'
 import TypingEffect from "./components/TypingEffect";
 import TerminalInput from "./components/terminal-Input";
+import { Suspense } from "react";
+import ProjectsGridSkeleton from './components/ProjectsGridSkeleton';
  
 const quantico = Quantico({
   weight: '400',
@@ -100,7 +102,13 @@ export default function Home() {
                         
                     </div>
                     
-                    <ProjectsGrid projects={projects}/>
+                    {/* <ProjectsGrid projects={projects} /> */}
+                    
+
+                    <Suspense fallback={<ProjectsGridSkeleton/>}>
+                        <ProjectsGrid projects={projects} />
+                    </Suspense>
+                    {/* <ProjectsGridSkeleton/> */}
 
             </div>
         </>
