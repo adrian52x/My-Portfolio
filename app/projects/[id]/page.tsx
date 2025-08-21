@@ -70,9 +70,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
+                        className="inline-flex items-center gap-2 bg-gray-700/60 hover:bg-slate-700 text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-600/30"
                     >
                         🚀 View Demo
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
                     </a>
                 )}
             </div>
