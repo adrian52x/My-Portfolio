@@ -5,7 +5,7 @@ const ProjectsGridSkeleton = () => {
         {Array.from({ length: 6 }).map((_, index) => (
           <div
             key={index}
-            className="project animate-pulse bg-gray-700 rounded-lg shadow-md p-4"
+            className="project animate-pulse rounded-lg shadow-md p-4"
           >
             <div className="h-48 bg-gray-600 rounded-md mb-4"></div>
             <div className="h-6 bg-gray-600 rounded-md mb-2"></div>

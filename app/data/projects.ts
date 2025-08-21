@@ -127,13 +127,14 @@ export const projects: ProjectParams[] = [
     {
         id: "11",
         title: "Mediclean [e-commerce]",
-        mainImage: "/images/mediclean/mediclean1.jpg",
-        images: ["/images/mediclean/mediclean1.jpg"],
-        technologies: ["Next.js", "Tailwind", "Supabase", "Stripe"],
+        isImportant: true,
+        mainImage: "/images/mediclean/mediclean2.jpg",
+        images: ["/images/mediclean/mediclean1.jpg", "/images/mediclean/mediclean2.jpg",  "/images/mediclean/mediclean3.jpg",  "/images/mediclean/mediclean4.jpg", "/images/mediclean/mediclean5.jpg", "/images/mediclean/mediclean6.jpg"],
+        technologies: ["Next.js", "Tailwind", "Supabase", "PostgreSQL"],
         comments: [
             "2025 / Real project for a client", 
             "In progress...",
-            "https://mediclean.vercel.app/"
+            "Demo: mediclean.vercel.app"
         ],
         link: "https://mediclean.vercel.app/"
     },

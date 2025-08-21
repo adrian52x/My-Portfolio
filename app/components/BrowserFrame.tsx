@@ -74,15 +74,16 @@ export default function BrowserFrame({
     {/* Image Modal */}
     {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-          <div className="relative">
-            <button
-              onClick={closeModal}
-              className="absolute top-2 right-2 bg-gray-800 text-white px-2 py-1 rounded-lg"
-            >
-              Close
-            </button>
-            <img src={modalImgSrc} className="max-w-full max-h-full" />
-          </div>
+          {/* Close Button - Fixed to screen, not image */}
+          <button
+            onClick={closeModal}
+            className="fixed top-4 right-4 z-[60] bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold shadow-lg"
+          >
+            ✕ Close
+          </button>
+          
+          {/* Image Container */}
+          <img src={modalImgSrc} className="max-w-[90vw] max-h-[90vh] object-contain" />
         </div>
       )}
 

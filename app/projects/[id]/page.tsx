@@ -1,7 +1,7 @@
 import BrowserFrame from '@/app/components/BrowserFrame';
 import { projects } from '@/app/data/projects';
 import { FaReact, FaNodeJs, FaDatabase, FaArrowLeft, FaJsSquare, FaSync, FaExchangeAlt, FaJava, FaLeaf, FaPython, FaHtml5, FaCss3  } from 'react-icons/fa'
-import { SiTailwindcss, SiExpress, SiMongodb, SiNextdotjs, SiStripe, SiSvelte, SiVuedotjs, SiNestjs, SiTensorflow, SiKeras, SiSupabase  } from 'react-icons/si'
+import { SiTailwindcss, SiExpress, SiMongodb, SiNextdotjs, SiStripe, SiSvelte, SiVuedotjs, SiNestjs, SiTensorflow, SiKeras, SiSupabase, SiPostgresql  } from 'react-icons/si'
 import Link from 'next/link';
 import ScrollToTopButton from '@/app/components/ScrollToTopButton';
 
@@ -34,6 +34,7 @@ const technologyIcons: { [key: string]: React.ComponentType<{ className?: string
     "HTML": FaHtml5,
     "CSS": FaCss3,
     "Supabase": SiSupabase,
+    "PostgreSQL": SiPostgresql,
 };
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
@@ -43,47 +44,63 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     const project = projects.find((project) => project.id === id);
 
     return (
-    <div className="relative flex justify-between py-10 px-4">
-
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+        
         {/* Back Button */}
         <Link href="/">
-            <div className="fixed top-2 left-4 bg-gray-800 text-white px-3 py-1 rounded-lg shadow-lg flex items-center">
-                <FaArrowLeft/> 
+            <div className="fixed top-6 left-6 z-50 bg-gray-800/90 backdrop-blur-sm text-white px-4 py-3 rounded-xl shadow-lg hover:bg-gray-700 transition-all duration-300 flex items-center gap-2">
+                <FaArrowLeft className="text-sm"/> 
+                <span className="text-sm font-medium">Back to Portfolio</span>
             </div>    
         </Link>
 
         {/* Scroll to Top Button */}
         <ScrollToTopButton />
 
-
-        <div className="mx-auto flex flex-col lg:flex-row items-start gap-14">
-            {/* Technologies Section */}
-            <div className="w-full lg:w-1/6  rounded-lg p-6 ">
-                <div className="grid grid-cols-4 gap-14">
-                    {project?.technologies?.map((tech) => {
-                        const Icon = technologyIcons[tech];
-                        return <TechIcon key={tech} Icon={Icon} name={tech}  />;
-                    })}
-
-                    {project?.link && (
-                        <a
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-400 hover:underline"
-                        >
-                            Project Demo
-                        </a>
-                    )}
-
-                </div>
+        {/* Hero Section */}
+        <div className="relative pt-24 pb-12 px-6">
+            <div className="max-w-6xl mx-auto text-center">
+                <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    {project?.title}
+                </h1>
+                
+                {/* Project Demo Link */}
+                {project?.link && (
+                    <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
+                    >
+                        🚀 View Demo
+                    </a>
+                )}
             </div>
+        </div>
 
-            {/* BrowserFrame Section */}
-            <div className="w-full lg:w-3/5">
+        <div className="max-w-7xl mx-auto px-6 pb-20">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                {/* Technologies Sidebar */}
+                <div className="lg:col-span-3">
+                    <div className="sticky top-24 bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
+                        <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                            🛠️ Technologies
+                        </h3>
+                        <div className="grid grid-cols-2 lg:grid-cols-1 gap-4">
+                            {project?.technologies?.map((tech) => {
+                                const Icon = technologyIcons[tech];
+                                return <TechIcon key={tech} Icon={Icon} name={tech} />;
+                            })}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Main Content */}
+                <div className="lg:col-span-6 space-y-8">
                 {project?.videos?.map((video, index) => (
                     <BrowserFrame key={index} title={project.title}>
-                        <video className="w-full min-h-[300px]" controls>
+                        <video className="w-full min-h-[350px]" controls>
                             <source src={video} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
@@ -97,25 +114,27 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                         <img className="w-full max-h-[80vh]" src={img} />
                     </BrowserFrame>
                 ))}
-            </div>
-
-        
-            
-
-            
-            {/* Comment Section */}
-            {project?.comments && (
-                <div className="w-full lg:w-1/6 bg-gray-800 rounded-lg p-6 shadow-lg">
-                    <h3 className="text-xl font-bold text-white mb-4">Comments</h3>
-                    {project.comments.map((comment, index) => (
-                        <div key={index} className="bg-gray-700 rounded-lg p-4 text-gray-300 mb-4">
-                            <p className="mb-2">{comment}</p>
-                        </div>
-                    ))}
                 </div>
-            )}
 
-            
+                {/* Comments Sidebar */}
+                {project?.comments && (
+                    <div className="lg:col-span-3">
+                        <div className="sticky top-24 bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
+                            <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                                💬 Project Details
+                            </h3>
+                            <div className="space-y-4">
+                                {project.comments.map((comment, index) => (
+                                    <div key={index} className="bg-gray-700/50 rounded-lg p-4 text-gray-300 border border-gray-600/30">
+                                        <p className="text-sm leading-relaxed">{comment}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                )}
+                
+            </div>
         </div>
     </div>
  
@@ -129,9 +148,9 @@ interface TechIconProps {
 
 function TechIcon({ Icon, name }: TechIconProps) {
     return (
-      <div className="flex flex-col items-center">
-        <Icon className="text-4xl text-blue-500 mb-2" />
-        <span className="text-sm text-gray-300">{name}</span>
+      <div className="group flex flex-col items-center p-3 bg-gray-700/30 rounded-xl border border-gray-600/30 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
+        <Icon className="text-3xl text-blue-400 mb-2 group-hover:text-blue-300 transition-colors" />
+        <span className="text-xs text-gray-300 font-medium text-center leading-tight">{name}</span>
       </div>
     )
 }

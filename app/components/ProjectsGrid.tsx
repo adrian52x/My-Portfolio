@@ -16,14 +16,13 @@ const ProjectCard = ({ project }: { project: ProjectParams }) => {
     };
 
     return (
-        <div className={`project shadow-md hover:shadow-orange-400 transition-shadow duration-300`}>
+        <div className={`project ${project.isImportant ? 'important' : ''}`}>
             <Image key={project.id} src={project.mainImage} alt={project.title} width={500} height={300} priority />
             {/* <img key={project.id} src={project.mainImage}  /> */}
             <div className="content">
                 <h1>{project.title}</h1>
                 <button
                     onClick={viewDetailsButton}
-                    className="relative text-white px-4 py-2 rounded-lg hover:bg-neutral-900 transition-colors duration-300"
                     disabled={isLoading} // Disable button while loading
                 >
                     {isLoading ? <Loader /> : 'View details'}

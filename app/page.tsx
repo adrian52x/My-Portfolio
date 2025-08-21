@@ -83,7 +83,7 @@ export default function Home() {
                                     <div>~/</div> 
                                     <div>mainSkills&#36;</div>
                                 </div>
-                                <div className="text-orange-300">&#91;"Software Development", "Testing", "DevOps", "Linux", "System administration", "Networking" &#93;</div>
+                                <div className="text-orange-300">&#91;"Web Development", "Frontend/Backend", "DevOps/Cloud", "Linux", "Database Design" &#93;</div>
                             </div>
                             <hr />
                             
