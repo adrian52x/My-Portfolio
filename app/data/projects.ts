@@ -21,7 +21,8 @@ export const projects: ProjectParams[] = [
         comments: [
             "2024 / School project",
             "Web app where users can save their travel destinations and share them with others",
-        ]
+        ],
+        link: "https://travel-destinations-project.vercel.app/"
     },
     {
         id: "9",
@@ -61,11 +62,11 @@ export const projects: ProjectParams[] = [
         videos: ["/videos/floor-plan.mp4"],
         technologies: ["Svelte", "Node.js", "Express", "MongoDB", "Tailwind"],
         comments: [
-            "2023 / Real project",
+            "2023 / Internal tool for AGC Bio",
             "Created a digital floor plan solution for AGC Biologics as part of my student assistant role",
-            "Responsibilities included frontend development, backend architecture, and CI/CD pipeline implementation",
-            "Dinamic creation of floor plans and rooms",
-            "Dinamic search and filtering of rooms/intruments",
+            "Responsibilities included frontend / backend development, database design, and CI/CD pipeline implementation",
+            "Dynamic creation of floor plans and rooms",
+            "Dynamic search and filtering of rooms/intruments",
         ],
         link: "https://go.screenpal.com/watch/c0Qo3pVCaPH?redirect=true"    
     },
@@ -74,7 +75,7 @@ export const projects: ProjectParams[] = [
     {
         id: "6",
         title: "Ask & Share (Startup)",
-        isImportant: true,
+        isImportant: false,
         mainImage: "/images/ask-share/askshare-mentors.png",
         images: ["/images/ask-share/askshare-mentors.png", "/images/ask-share/askshare-sessions.png"],
         videos: ["/videos/askshare-main.mp4", "/videos/askshare-meeting.mp4", "/videos/askshare-mentor.mp4"],
@@ -84,7 +85,9 @@ export const projects: ProjectParams[] = [
             "Ask & Share is a platform that connects mentors and mentees",
             "Users can book sessions with mentors and pay for them using Stripe", 
             "Project stopped at MVP stage", 
-            "Based on airbnb business model"]
+            "Based on airbnb business model"],
+        link: "https://ask-share.vercel.app/"
+
     },
     {
         id: "8",
@@ -126,17 +129,17 @@ export const projects: ProjectParams[] = [
     },
     {
         id: "11",
-        title: "Mediclean [e-commerce]",
+        title: "www.dezinfect.md [e-commerce]",
         isImportant: true,
         mainImage: "/images/mediclean/mediclean2.jpg",
         images: ["/images/mediclean/mediclean1.jpg", "/images/mediclean/mediclean2.jpg",  "/images/mediclean/mediclean3.jpg",  "/images/mediclean/mediclean4.jpg", "/images/mediclean/mediclean5.jpg", "/images/mediclean/mediclean6.jpg"],
         technologies: ["Next.js", "Tailwind", "Supabase", "PostgreSQL"],
         comments: [
             "2025 / Real project for a client", 
-            "In progress...",
-            "Demo: mediclean.vercel.app"
+            "Live: www.dezinfect.md",
+            "E-commerce website for selling disinfectants and cleaning products",
         ],
-        link: "https://mediclean.vercel.app/"
+        link: "https://www.dezinfect.md"
     },
     {
         id: "4",
@@ -165,6 +168,20 @@ export const projects: ProjectParams[] = [
             "Role-based access control for users",
         ]
     },
+    {
+        id: "12",
+        title: "DREAM BAR",
+        mainImage: "/images/dreambar/dreambar.jpg",
+        images: ["/images/dreambar/dreambar.jpg", "/images/dreambar/dreambar2.jpg"],
+        technologies: ["React", "Tailwind"],
+        comments: [
+            "2025 / Real project for a client", 
+            "Digital menu website for a local business in Moldova",
+            "Interactive menu with categories, pricing, and modern design",
+            "Mobile-responsive layout for customer convenience",
+        ],
+        link: "https://dreambar.vercel.app/"
+    }
 
 
     
