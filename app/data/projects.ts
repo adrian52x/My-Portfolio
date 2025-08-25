@@ -86,7 +86,7 @@ export const projects: ProjectParams[] = [
             "Users can book sessions with mentors and pay for them using Stripe", 
             "Project stopped at MVP stage", 
             "Based on airbnb business model"],
-        link: "https://ask-share.vercel.app/"
+        link: "https://ask-share.netlify.app/"
 
     },
     {
