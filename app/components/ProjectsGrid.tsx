@@ -5,6 +5,34 @@ import { ProjectParams } from "../data/projects";
 import { useState } from 'react';
 import { Loader } from './Loader';
 import Image from 'next/image';
+import { FaReact, FaNodeJs, FaDatabase, FaJsSquare, FaSync, FaExchangeAlt, FaJava, FaLeaf, FaPython, FaHtml5, FaCss3 } from 'react-icons/fa';
+import { SiTailwindcss, SiExpress, SiMongodb, SiNextdotjs, SiStripe, SiSvelte, SiVuedotjs, SiNestjs, SiTensorflow, SiKeras, SiSupabase, SiPostgresql } from 'react-icons/si';
+
+const technologyIcons: { [key: string]: React.ComponentType<{ className?: string }> } = {
+    "React": FaReact,
+    "Node.js": FaNodeJs,
+    "Tailwind": SiTailwindcss,
+    "Database": FaDatabase,
+    "JavaScript": FaJsSquare,
+    "Express": SiExpress,
+    "MongoDB": SiMongodb,
+    "Next.js": SiNextdotjs,
+    "Stripe": SiStripe,
+    "Webhooks": FaSync,
+    "Svelte": SiSvelte,
+    "Vue.js": SiVuedotjs,
+    "API": FaExchangeAlt,
+    "Nest.js": SiNestjs,
+    "Java Spring Boot": FaJava,
+    "Thymeleaf": FaLeaf,
+    "Python": FaPython,
+    "TensorFlow": SiTensorflow,
+    "Keras": SiKeras,
+    "HTML": FaHtml5,
+    "CSS": FaCss3,
+    "Supabase": SiSupabase,
+    "PostgreSQL": SiPostgresql,
+};
 
 const ProjectCard = ({ project }: { project: ProjectParams }) => {
     const router = useRouter();
@@ -29,7 +57,7 @@ const ProjectCard = ({ project }: { project: ProjectParams }) => {
                         rel="noopener noreferrer"
                         className="inline-block"
                     >
-                        <div className="bg-black/80 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-md border border-white/30 hover:bg-black/90 hover:border-white/50 transition-all duration-200">
+                        <div className="bg-neutral-800 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-md border border-white/30 hover:bg-black/90 hover:border-white/50 transition-all duration-200">
                             🔗 DEMO
                         </div>
                     </a>
@@ -49,6 +77,25 @@ const ProjectCard = ({ project }: { project: ProjectParams }) => {
             
             <div className="content">
                 <h1>{project.title}</h1>
+                
+                {/* Technology Icons */}
+                {project.technologies && project.technologies.length > 0 && (
+                    <div className="flex items-center justify-center gap-2 mb-3 flex-wrap">
+                        {project.technologies.slice(0, 5).map((tech) => {
+                            const Icon = technologyIcons[tech];
+                            return Icon ? (
+                                <div 
+                                    key={tech}
+                                    className="bg-neutral-800 backdrop-blur-sm p-1.5 rounded-md border border-white/20"
+                                    title={tech}
+                                >
+                                    <Icon className="text-white text-lg" />
+                                </div>
+                            ) : null;
+                        })}
+                    </div>
+                )}
+                
                 <button
                     onClick={viewDetailsButton}
                     disabled={isLoading} // Disable button while loading

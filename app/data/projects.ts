@@ -66,7 +66,7 @@ export const projects: ProjectParams[] = [
             "Created a digital floor plan solution for AGC Biologics as part of my student assistant role",
             "Responsibilities included frontend / backend development, database design, and CI/CD pipeline implementation",
             "Dynamic creation of floor plans and rooms",
-            "Dynamic search and filtering of rooms/intruments",
+            "Dynamic search and filtering of rooms/instruments",
         ],
         link: "https://go.screenpal.com/watch/c0Qo3pVCaPH?redirect=true"    
     },
@@ -132,12 +132,12 @@ export const projects: ProjectParams[] = [
         title: "www.dezinfect.md [e-commerce]",
         isImportant: true,
         mainImage: "/images/mediclean/mediclean2.jpg",
-        images: ["/images/mediclean/mediclean1.jpg", "/images/mediclean/mediclean2.jpg",  "/images/mediclean/mediclean3.jpg",  "/images/mediclean/mediclean4.jpg", "/images/mediclean/mediclean5.jpg", "/images/mediclean/mediclean6.jpg"],
+        images: ["/images/mediclean/dezinfect1.jpg", "/images/mediclean/dezinfect2.jpg", "/images/mediclean/mediclean2.jpg",  "/images/mediclean/mediclean3.jpg",  "/images/mediclean/mediclean4.jpg", "/images/mediclean/mediclean5.jpg", "/images/mediclean/mediclean6.jpg", "/images/mediclean/dezinfect3.jpg"],
         technologies: ["Next.js", "Tailwind", "Supabase", "PostgreSQL"],
         comments: [
             "2025 / Real project for a client", 
-            "Live: www.dezinfect.md",
-            "E-commerce website for selling disinfectants and cleaning products",
+            "www.dezinfect.md",
+            "E-commerce website for disinfectants, cleaning products and medical equipment",
         ],
         link: "https://www.dezinfect.md"
     },
