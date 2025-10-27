@@ -1,41 +1,15 @@
 import BrowserFrame from '@/app/components/BrowserFrame';
 import { projects } from '@/app/data/projects';
-import { FaReact, FaNodeJs, FaDatabase, FaArrowLeft, FaJsSquare, FaSync, FaExchangeAlt, FaJava, FaLeaf, FaPython, FaHtml5, FaCss3  } from 'react-icons/fa'
-import { SiTailwindcss, SiExpress, SiMongodb, SiNextdotjs, SiStripe, SiSvelte, SiVuedotjs, SiNestjs, SiTensorflow, SiKeras, SiSupabase, SiPostgresql  } from 'react-icons/si'
+import { FaArrowLeft } from 'react-icons/fa'
 import Link from 'next/link';
 import ScrollToTopButton from '@/app/components/ScrollToTopButton';
+import { technologyIcons } from '@/app/data/technologyIcons';
 
 interface ProjectPageProps {
     params: Promise<{
         id: string;
     }>;
 }
-
-const technologyIcons: { [key: string]: React.ComponentType<{ className?: string }> } = {
-    "React": FaReact,
-    "Node.js": FaNodeJs,
-    "Tailwind": SiTailwindcss,
-    "Database": FaDatabase,
-    "JavaScript": FaJsSquare,
-    "Express": SiExpress,
-    "MongoDB": SiMongodb,
-    "Next.js": SiNextdotjs,
-    "Stripe": SiStripe,
-    "Webhooks": FaSync,
-    "Svelte": SiSvelte,
-    "Vue.js": SiVuedotjs,
-    "API": FaExchangeAlt,
-    "Nest.js": SiNestjs,
-    "Java Spring Boot": FaJava,
-    "Thymeleaf": FaLeaf,
-    "Python": FaPython,
-    "TensorFlow": SiTensorflow,
-    "Keras": SiKeras,
-    "HTML": FaHtml5,
-    "CSS": FaCss3,
-    "Supabase": SiSupabase,
-    "PostgreSQL": SiPostgresql,
-};
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
     

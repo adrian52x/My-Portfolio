@@ -5,34 +5,7 @@ import { ProjectParams } from "../data/projects";
 import { useState } from 'react';
 import { Loader } from './Loader';
 import Image from 'next/image';
-import { FaReact, FaNodeJs, FaDatabase, FaJsSquare, FaSync, FaExchangeAlt, FaJava, FaLeaf, FaPython, FaHtml5, FaCss3 } from 'react-icons/fa';
-import { SiTailwindcss, SiExpress, SiMongodb, SiNextdotjs, SiStripe, SiSvelte, SiVuedotjs, SiNestjs, SiTensorflow, SiKeras, SiSupabase, SiPostgresql } from 'react-icons/si';
-
-const technologyIcons: { [key: string]: React.ComponentType<{ className?: string }> } = {
-    "React": FaReact,
-    "Node.js": FaNodeJs,
-    "Tailwind": SiTailwindcss,
-    "Database": FaDatabase,
-    "JavaScript": FaJsSquare,
-    "Express": SiExpress,
-    "MongoDB": SiMongodb,
-    "Next.js": SiNextdotjs,
-    "Stripe": SiStripe,
-    "Webhooks": FaSync,
-    "Svelte": SiSvelte,
-    "Vue.js": SiVuedotjs,
-    "API": FaExchangeAlt,
-    "Nest.js": SiNestjs,
-    "Java Spring Boot": FaJava,
-    "Thymeleaf": FaLeaf,
-    "Python": FaPython,
-    "TensorFlow": SiTensorflow,
-    "Keras": SiKeras,
-    "HTML": FaHtml5,
-    "CSS": FaCss3,
-    "Supabase": SiSupabase,
-    "PostgreSQL": SiPostgresql,
-};
+import { technologyIcons } from '../data/technologyIcons';
 
 const ProjectCard = ({ project }: { project: ProjectParams }) => {
     const router = useRouter();
