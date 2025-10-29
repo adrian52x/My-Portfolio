@@ -142,6 +142,22 @@ export const projects: ProjectParams[] = [
         link: "https://www.dezinfect.md"
     },
     {
+        id: "13",
+        title: "AI Surveillance System",
+        mainImage: "/images/camera-ai/camera1.jpg",
+        images: ["/images/camera-ai/camera1.jpg", "/images/camera-ai/camera2.jpg", "/images/camera-ai/camera3.jpg"],
+        videos: ["/videos/camera-ai.mp4"],
+        technologies: ["React", "Express", "TensorFlow", "Websockets", "Discord"],
+        comments: [
+            "2025 / Personal project", 
+            "Home surveillance system that turns any device with a camera into a security monitor",
+            "AI continuously detects persons for 4-6 seconds before triggering Discord alerts with screenshots",
+            "Frontend built with Next.js and React using COCO-SSD (TensorFlow.js model) for real-time object detection",
+            "Backend powered by Express and Socket.io for WebSocket communication between cameras and admin dashboard",
+            "Admin dashboard displays all connected cameras with live video feeds",
+        ]
+    },
+    {
         id: "4",
         title: "Parking Finder App (Concept)",
         mainImage: "/images/ParkingFinderApp/OAK-home.jpg",
@@ -152,20 +168,6 @@ export const projects: ProjectParams[] = [
             "Concept project for a parking finder app",
             "Developed a web app that allows users to find available parking spots",
             "Implemented a map view to display parking locations and availability",
-        ]
-    },
-    {
-        id: "10",
-        title: "C19 Test Center",
-        mainImage: "/images/no-img.jpg",
-        images: ["/images/c19.png"],
-        technologies: ["Java Spring Boot", "Thymeleaf", "Database"],
-        comments: [
-            "2020 / Exam project", 
-            "Covid-19 Test Center project to book appointments",
-            "Developed using Java Spring Boot and Thymeleaf",
-            "Implemented basic CRUD operations for appointments",
-            "Role-based access control for users",
         ]
     },
     {
@@ -181,8 +183,21 @@ export const projects: ProjectParams[] = [
             "Mobile-responsive layout for customer convenience",
         ],
         link: "https://dreambar.vercel.app/"
-    }
-
+    },
+    {
+        id: "10",
+        title: "C19 Test Center",
+        mainImage: "/images/no-img.jpg",
+        images: ["/images/c19.png"],
+        technologies: ["Java Spring Boot", "Thymeleaf", "Database"],
+        comments: [
+            "2020 / Exam project", 
+            "Covid-19 Test Center project to book appointments",
+            "Developed using Java Spring Boot and Thymeleaf",
+            "Implemented basic CRUD operations for appointments",
+            "Role-based access control for users",
+        ]
+    },
 
     
 ];
