@@ -30,7 +30,7 @@ const ProjectCard = ({ project }: { project: ProjectParams }) => {
                         rel="noopener noreferrer"
                         className="inline-block"
                     >
-                        <div className="bg-neutral-800 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-md border border-white/30 hover:bg-black/90 hover:border-white/50 transition-all duration-200">
+                        <div className="bg-gray-900/60 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-md hover:bg-gray-700">
                             🔗 DEMO
                         </div>
                     </a>
@@ -49,7 +49,7 @@ const ProjectCard = ({ project }: { project: ProjectParams }) => {
             )}
             
             <div className="content">
-                <h1>{project.title}</h1>
+                <h1 className='bg-gray-900/60 p-1 rounded-md'>{project.title}</h1>
                 
                 {/* Technology Icons */}
                 {project.technologies && project.technologies.length > 0 && (
@@ -59,7 +59,7 @@ const ProjectCard = ({ project }: { project: ProjectParams }) => {
                             return Icon ? (
                                 <div 
                                     key={tech}
-                                    className="bg-neutral-800 backdrop-blur-sm p-1.5 rounded-md border border-white/20"
+                                    className="bg-gray-900/60 backdrop-blur-sm p-1.5 rounded-md border border-white/20"
                                     title={tech}
                                 >
                                     <Icon className="text-white text-lg" />
@@ -72,6 +72,7 @@ const ProjectCard = ({ project }: { project: ProjectParams }) => {
                 <button
                     onClick={viewDetailsButton}
                     disabled={isLoading} // Disable button while loading
+                    className='bg-gray-900/60'
                 >
                     {isLoading ? <Loader /> : 'View details'}
                 </button>

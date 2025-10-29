@@ -55,11 +55,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 pb-20">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="max-w-8xl mx-auto px-6 pb-20">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
                 
                 {/* Technologies Sidebar */}
-                <div className="lg:col-span-3">
+                <div className="lg:col-span-2">
                     <div className="sticky top-24 bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
                         <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
                             🛠️ Technologies
@@ -74,7 +74,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 </div>
 
                 {/* Main Content */}
-                <div className="lg:col-span-6 space-y-8">
+                <div className="lg:col-span-8 space-y-4">
                 {project?.videos?.map((video, index) => (
                     <BrowserFrame key={index} title={project.title}>
                         <video className="w-full min-h-[350px]" controls>
@@ -95,7 +95,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
                 {/* Comments Sidebar */}
                 {project?.comments && (
-                    <div className="lg:col-span-3">
+                    <div className="lg:col-span-2">
                         <div className="sticky top-24 bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
                             <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
                                 💬 Project Details
