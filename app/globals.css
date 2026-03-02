@@ -42,7 +42,6 @@ body {
     max-width: 1400px;
     columns: 3 320px;
     column-gap: 1.5em;
-    padding: 0 1em;
 }
 
 .terminal {
@@ -103,8 +102,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 1.4rem 1rem 0.7rem;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%);
+  padding: 1rem 1rem 0.6rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
   z-index: 1;
   pointer-events: none;
   transition: opacity 0.3s ease;
