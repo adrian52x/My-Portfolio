@@ -74,23 +74,23 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 </div>
 
                 {/* Main Content */}
-                <div className="lg:col-span-8 space-y-4">
-                {project?.videos?.map((video, index) => (
-                    <BrowserFrame key={index} title={project.title}>
-                        <video className="w-full min-h-[350px]" controls>
-                            <source src={video} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </BrowserFrame>
-                ))}
+                <div className="lg:col-span-8">
+                    {project?.videos?.map((video, index) => (
+                        <BrowserFrame key={index} title={project.title}>
+                            <video className="w-full min-h-[350px]" controls>
+                                <source src={video} type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </BrowserFrame>
+                    ))}
 
-                
-                {project?.images?.map((img, index) => (
-                    <BrowserFrame key={index} title={project.title}>
-                        {/* <Image key={index} src={img} alt={project.title} width={1200} height={300} /> */}
-                        <img className="w-full max-h-[80vh]" src={img} />
-                    </BrowserFrame>
-                ))}
+                    
+                    {project?.images?.map((img, index) => (
+                        <BrowserFrame key={index} title={project.title}>
+                            {/* <Image key={index} src={img} alt={project.title} width={1200} height={300} /> */}
+                            <img className="w-full max-h-[80vh]" src={img} />
+                        </BrowserFrame>
+                    ))}
                 </div>
 
                 {/* Comments Sidebar */}
@@ -125,7 +125,7 @@ interface TechIconProps {
 
 function TechIcon({ Icon, name }: TechIconProps) {
     return (
-      <div className="group flex flex-col items-center p-3 bg-gray-700/30 rounded-xl border border-gray-600/30 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
+      <div className="group flex flex-col items-center p-3 bg-gray-700/30 rounded-xl border border-gray-600/30 hover:border-blue-500/50">
         <Icon className="text-3xl text-blue-400 mb-2 group-hover:text-blue-300 transition-colors" />
         <span className="text-xs text-gray-300 font-medium text-center leading-tight">{name}</span>
       </div>
