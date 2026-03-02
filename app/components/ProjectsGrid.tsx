@@ -19,8 +19,7 @@ const ProjectCard = ({ project }: { project: ProjectParams }) => {
     return (
         <div className={`project ${project.isImportant ? 'important' : ''}`}>
             <Image key={project.id} src={project.mainImage} alt={project.title} width={500} height={300} priority />
-            {/* <img key={project.id} src={project.mainImage}  /> */}
-            
+
             {/* Link button for projects with links */}
             {project.link && (
                 <div className="absolute top-3 left-3 z-10">
@@ -47,9 +46,17 @@ const ProjectCard = ({ project }: { project: ProjectParams }) => {
                     </div>
                 </div>
             )}
-            
+
+            {/* Always-visible footer */}
+            <div className="card-footer">
+                <h2>{project.title}</h2>
+                {project.year && <div className="card-year">{project.year}</div>}
+            </div>
+
+            {/* Hover overlay */}
             <div className="content">
-                <h1 className='bg-gray-900/60 p-1 rounded-md'>{project.title}</h1>
+                {/* <h1 className='bg-gray-900/60 p-1 rounded-md'>{project.title}</h1> */}
+                <h1 className='bg-gray-900/40 py-1 px-2 rounded-lg'>{project.title}</h1>
                 
                 {/* Technology Icons */}
                 {project.technologies && project.technologies.length > 0 && (

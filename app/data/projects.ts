@@ -1,6 +1,7 @@
 export interface ProjectParams {
     id: string;
     title: string;
+    year: number;
     isImportant?: boolean;
     mainImage: string;
     images: string[];
@@ -14,6 +15,7 @@ export const projects: ProjectParams[] = [
     {
         id: "1",
         title: "Travel Destinations",
+        year: 2024,
         mainImage: "/images/travel/travel.jpg",
         images: ["/images/travel/travel.jpg", "/images/travel/travel-login.png", "/images/travel/travel-add.png"],
         videos: ["/videos/travel.mp4"],
@@ -27,6 +29,7 @@ export const projects: ProjectParams[] = [
     {
         id: "9",
         title: "My first E-Commerce",
+        year: 2021,
         mainImage: "/images/e-com/1.png",
         images: ["/images/e-com/1.png", "/images/e-com/2.png", "/images/e-com/3.png", "/images/e-com/4.png", "/images/e-com/5.png"],
         technologies: ["Svelte", "Node.js", "Express", "Database"],
@@ -41,6 +44,7 @@ export const projects: ProjectParams[] = [
     {
         id: "2",
         title: "Neural-network Image classifier",
+        year: 2022,
         mainImage: "/images/image-classifier.png",
         images: ["/images/image-classifier.png"],
         technologies: ["Python", "TensorFlow", "Keras"],
@@ -56,6 +60,7 @@ export const projects: ProjectParams[] = [
     {
         id: "3",
         title: "Floor Plan (AGC Biologics)",
+        year: 2023,
         isImportant: true,
         mainImage: "/images/floorplan/floorplan-main.jpg",
         images: ["/images/floorplan/floorplan-dev-steps.jpg", "/images/floorplan/vat83b-2.jpg", "/images/floorplan/vat83b-edit-room.jpg", "/images/floorplan/vat83b-search.jpg"],
@@ -75,6 +80,7 @@ export const projects: ProjectParams[] = [
     {
         id: "6",
         title: "Ask & Share (Startup)",
+        year: 2024,
         isImportant: false,
         mainImage: "/images/ask-share/askshare-mentors.png",
         images: ["/images/ask-share/askshare-mentors.png", "/images/ask-share/askshare-sessions.png"],
@@ -92,6 +98,7 @@ export const projects: ProjectParams[] = [
     {
         id: "8",
         title: "Green-UX",
+        year: 2025,
         mainImage: "/images/green-ux/green1.jpg",
         images: ["/images/green-ux/green1.jpg", "/images/green-ux/green2.jpg"],
         technologies: ["HTML", "CSS", "JavaScript" ],
@@ -104,6 +111,7 @@ export const projects: ProjectParams[] = [
     {
         id: "5",
         title: "Simple Pokemon App",
+        year: 2021,
         mainImage: "/images/pokemonApp/1.png",
         images: ["/images/pokemonApp/1.png", "/images/pokemonApp/2.png"],
         technologies: ["Vue.js", "API"],
@@ -117,6 +125,7 @@ export const projects: ProjectParams[] = [
     {
         id: "7",
         title: "DAOS",
+        year: 2024,
         mainImage: "/images/daos/DAOS-main.png",
         images: ["/images/daos/DAOS-main.png", "/images/daos/DAOS-sog.png"],
         technologies: ["React", "Nest.js", "MongoDB", "Tailwind"],
@@ -130,6 +139,7 @@ export const projects: ProjectParams[] = [
     {
         id: "11",
         title: "www.dezinfect.md [e-commerce]",
+        year: 2025,
         isImportant: true,
         mainImage: "/images/mediclean/mediclean2.jpg",
         images: ["/images/mediclean/dezinfect1.jpg", "/images/mediclean/dezinfect2.jpg", "/images/mediclean/mediclean2.jpg",  "/images/mediclean/mediclean3.jpg",  "/images/mediclean/mediclean4.jpg", "/images/mediclean/mediclean5.jpg", "/images/mediclean/mediclean6.jpg", "/images/mediclean/dezinfect3.jpg"],
@@ -144,6 +154,7 @@ export const projects: ProjectParams[] = [
     {
         id: "13",
         title: "AI Surveillance System",
+        year: 2025,
         mainImage: "/images/camera-ai/camera1.jpg",
         images: ["/images/camera-ai/camera1.jpg", "/images/camera-ai/camera2.jpg", "/images/camera-ai/camera3.jpg"],
         videos: ["/videos/camera-ai.mp4"],
@@ -160,6 +171,7 @@ export const projects: ProjectParams[] = [
     {
         id: "4",
         title: "Parking Finder App (Concept)",
+        year: 2022,
         mainImage: "/images/ParkingFinderApp/OAK-home.jpg",
         images: ["/images/ParkingFinderApp/OAK-home.jpg", "/images/ParkingFinderApp/OAK-map.jpg", "/images/ParkingFinderApp/OAK-map2.jpg", "/images/ParkingFinderApp/OAK-parkingSlots.jpg", "/images/ParkingFinderApp/OAK-profile.jpg"],
         technologies: ["Svelte", "Node.js", "Express", "MongoDB", "Tailwind"],
@@ -173,6 +185,7 @@ export const projects: ProjectParams[] = [
     {
         id: "12",
         title: "DREAM BAR",
+        year: 2025,
         mainImage: "/images/dreambar/dreambar.jpg",
         images: ["/images/dreambar/dreambar.jpg", "/images/dreambar/dreambar2.jpg"],
         technologies: ["React", "Tailwind"],
@@ -187,6 +200,7 @@ export const projects: ProjectParams[] = [
     {
         id: "10",
         title: "C19 Test Center",
+        year: 2020,
         mainImage: "/images/no-img.jpg",
         images: ["/images/c19.png"],
         technologies: ["Java Spring Boot", "Thymeleaf", "Database"],
