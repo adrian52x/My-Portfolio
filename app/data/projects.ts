@@ -27,20 +27,19 @@ export const projects: ProjectParams[] = [
         link: "https://travel-destinations-project.vercel.app/"
     },
     {
-        id: "9",
-        title: "My first E-Commerce",
-        year: 2021,
-        mainImage: "/images/e-com/1.png",
-        images: ["/images/e-com/1.png", "/images/e-com/2.png", "/images/e-com/3.png", "/images/e-com/4.png", "/images/e-com/5.png"],
-        technologies: ["Svelte", "Node.js", "Express", "Database"],
+        id: "8",
+        title: "Green-UX",
+        year: 2025,
+        mainImage: "/images/green-ux/green1.jpg",
+        images: ["/images/green-ux/green1.jpg", "/images/green-ux/green2.jpg"],
+        technologies: ["HTML", "CSS", "JavaScript" ],
         comments: [
-            "2021 / Personal project", 
-            "Simple e-commerce project built in Svelte",
-            "Users can add products to cart and checkout",
-            "Basic CRUD operations for products",
-        ]
+            "2025 / School (UX/UI) project",
+            "Green-UX is a project focused on sustainable UX/UI design",
+        ],
+        link: "https://green-ux.vercel.app/"
     },
- 
+
     {
         id: "2",
         title: "Neural-network Image classifier",
@@ -58,12 +57,25 @@ export const projects: ProjectParams[] = [
 
 
     {
+        id: "5",
+        title: "Simple Pokemon App",
+        year: 2021,
+        mainImage: "/images/pokemonApp/1.png",
+        images: ["/images/pokemonApp/1.png", "/images/pokemonApp/2.png"],
+        technologies: ["Vue.js", "API"],
+        comments: [
+            "2021 / Interview task", 
+            "Simple Pokemon app built in Vue.js for an interview task"
+        ]
+    },
+
+    {
         id: "3",
-        title: "Floor Plan (AGC Biologics)",
+        title: "Digital Floor Plan (AGC Biologics)",
         year: 2023,
         isImportant: true,
-        mainImage: "/images/floorplan/floorplan-main.jpg",
-        images: ["/images/floorplan/floorplan-dev-steps.jpg", "/images/floorplan/vat83b-2.jpg", "/images/floorplan/vat83b-edit-room.jpg", "/images/floorplan/vat83b-search.jpg"],
+        mainImage: "/images/floorplan/floorplan_thumbnail.jpg",
+        images: ["/images/floorplan/floorplan-dev-steps.jpg", "/images/floorplan/vat83b-2.jpg", "/images/floorplan/vat83b-edit-room.jpg", "/images/floorplan/vat83b-search.jpg", "/images/floorplan/floorplan_new.jpg"],
         videos: ["/videos/floor-plan.mp4"],
         technologies: ["Svelte", "Node.js", "Express", "MongoDB", "Tailwind"],
         comments: [
@@ -75,8 +87,22 @@ export const projects: ProjectParams[] = [
         ],
         link: "https://go.screenpal.com/watch/c0Qo3pVCaPH?redirect=true"    
     },
-
-
+    {
+        id: "11",
+        title: "www.dezinfect.md [e-commerce]",
+        year: 2025,
+        isImportant: true,
+        mainImage: "/images/mediclean/mediclean2.jpg",
+        images: ["/images/mediclean/dezinfect1.jpg", "/images/mediclean/dezinfect2.jpg", "/images/mediclean/mediclean2.jpg",  "/images/mediclean/mediclean3.jpg",  "/images/mediclean/mediclean4.jpg", "/images/mediclean/mediclean5.jpg", "/images/mediclean/mediclean6.jpg", "/images/mediclean/dezinfect3.jpg"],
+        technologies: ["Next.js", "Tailwind", "Supabase", "PostgreSQL"],
+        comments: [
+            "2025 / Freelance project", 
+            "www.dezinfect.md",
+            "E-commerce website for disinfectants, cleaning products and medical equipment",
+        ],
+        link: "https://www.dezinfect.md"
+    },
+    
     {
         id: "6",
         title: "Ask & Share (Startup)",
@@ -95,31 +121,6 @@ export const projects: ProjectParams[] = [
         link: "https://ask-share.netlify.app/"
 
     },
-    {
-        id: "8",
-        title: "Green-UX",
-        year: 2025,
-        mainImage: "/images/green-ux/green1.jpg",
-        images: ["/images/green-ux/green1.jpg", "/images/green-ux/green2.jpg"],
-        technologies: ["HTML", "CSS", "JavaScript" ],
-        comments: [
-            "2025 / School (UX/UI) project",
-            "Green-UX is a project focused on sustainable UX/UI design",
-        ],
-        link: "https://green-ux.vercel.app/"
-    },
-    {
-        id: "5",
-        title: "Simple Pokemon App",
-        year: 2021,
-        mainImage: "/images/pokemonApp/1.png",
-        images: ["/images/pokemonApp/1.png", "/images/pokemonApp/2.png"],
-        technologies: ["Vue.js", "API"],
-        comments: [
-            "2021 / Interview task", 
-            "Simple Pokemon app built in Vue.js for an interview task"
-        ]
-    },
 
 
     {
@@ -137,19 +138,32 @@ export const projects: ProjectParams[] = [
         ]
     },
     {
-        id: "11",
-        title: "www.dezinfect.md [e-commerce]",
-        year: 2025,
-        isImportant: true,
-        mainImage: "/images/mediclean/mediclean2.jpg",
-        images: ["/images/mediclean/dezinfect1.jpg", "/images/mediclean/dezinfect2.jpg", "/images/mediclean/mediclean2.jpg",  "/images/mediclean/mediclean3.jpg",  "/images/mediclean/mediclean4.jpg", "/images/mediclean/mediclean5.jpg", "/images/mediclean/mediclean6.jpg", "/images/mediclean/dezinfect3.jpg"],
-        technologies: ["Next.js", "Tailwind", "Supabase", "PostgreSQL"],
+        id: "9",
+        title: "My first E-Commerce",
+        year: 2021,
+        mainImage: "/images/e-com/1.png",
+        images: ["/images/e-com/1.png", "/images/e-com/2.png", "/images/e-com/3.png", "/images/e-com/4.png", "/images/e-com/5.png"],
+        technologies: ["Svelte", "Node.js", "Express", "Database"],
         comments: [
-            "2025 / Freelance project", 
-            "www.dezinfect.md",
-            "E-commerce website for disinfectants, cleaning products and medical equipment",
-        ],
-        link: "https://www.dezinfect.md"
+            "2021 / Personal project", 
+            "Simple e-commerce project built in Svelte",
+            "Users can add products to cart and checkout",
+            "Basic CRUD operations for products",
+        ]
+    },
+    {
+        id: "14",
+        title: "Modular authoring system (Ramboll)",
+        year: 2026,
+        mainImage: "/images/ramboll/ramboll_thumbnail.jpg",
+        images: ["/images/ramboll/ramboll1.jpg", "/images/ramboll/ramboll2.jpg", "/images/ramboll/ramboll3.jpg", "/images/ramboll/ramboll4.jpg"],
+        technologies: [ "React", "Next.js", "Nest.js", "PostgreSQL", "Docker", "MinIO" ],
+        comments: [
+            "Prototype developed as a bachelor project in collaboration with Ramboll — Incept Sustainability Team", 
+            "The platform lets authors build structured e-learning content from scratch through a guided UI.",
+            "E-learnings are composed of reusable content blocks.",
+            "System is modular and scalable.",
+        ]
     },
     {
         id: "13",
@@ -169,17 +183,15 @@ export const projects: ProjectParams[] = [
         ]
     },
     {
-        id: "4",
-        title: "Parking Finder App (Concept)",
-        year: 2022,
-        mainImage: "/images/ParkingFinderApp/OAK-home.jpg",
-        images: ["/images/ParkingFinderApp/OAK-home.jpg", "/images/ParkingFinderApp/OAK-map.jpg", "/images/ParkingFinderApp/OAK-map2.jpg", "/images/ParkingFinderApp/OAK-parkingSlots.jpg", "/images/ParkingFinderApp/OAK-profile.jpg"],
-        technologies: ["Svelte", "Node.js", "Express", "MongoDB", "Tailwind"],
+        id: "15",
+        title: "Wash World - Mobile App",
+        year: 2025,
+        mainImage: "/images/no-img.jpg",
+        images: [],
+        technologies: [ "React Native", "Expo Router", "Nest.js", "PostgreSQL" ],
         comments: [
-            "2022 / Exam project", 
-            "Concept project for a parking finder app",
-            "Developed a web app that allows users to find available parking spots",
-            "Implemented a map view to display parking locations and availability",
+            "TO BE ADDED",
+            "2025 / Exam project",
         ]
     },
     {
@@ -198,6 +210,20 @@ export const projects: ProjectParams[] = [
         link: "https://dreambar.vercel.app/"
     },
     {
+        id: "4",
+        title: "Parking Finder App (Concept)",
+        year: 2022,
+        mainImage: "/images/ParkingFinderApp/OAK-home.jpg",
+        images: ["/images/ParkingFinderApp/OAK-home.jpg", "/images/ParkingFinderApp/OAK-map.jpg", "/images/ParkingFinderApp/OAK-map2.jpg", "/images/ParkingFinderApp/OAK-parkingSlots.jpg", "/images/ParkingFinderApp/OAK-profile.jpg"],
+        technologies: ["Svelte", "Node.js", "Express", "MongoDB", "Tailwind"],
+        comments: [
+            "2022 / Exam project", 
+            "Concept project for a parking finder app",
+            "Developed a web app that allows users to find available parking spots",
+            "Implemented a map view to display parking locations and availability",
+        ]
+    },
+    {
         id: "10",
         title: "C-19 Test Center",
         year: 2020,
@@ -213,32 +239,6 @@ export const projects: ProjectParams[] = [
         ]
     },
 
-        {
-        id: "14",
-        title: "Modular authoring system (Ramboll)",
-        year: 2026,
-        mainImage: "/images/ramboll/ramboll3.jpg",
-        images: ["/images/ramboll/ramboll1.jpg", "/images/ramboll/ramboll2.jpg", "/images/ramboll/ramboll3.jpg", "/images/ramboll/ramboll4.jpg"],
-        technologies: [ "React", "Next.js", "Nest.js", "PostgreSQL", "Docker", "MinIO" ],
-        comments: [
-            "Prototype developed as a bachelor project in collaboration with Ramboll — Incept Sustainability Team", 
-            "The platform lets authors build structured e-learning content from scratch through a guided UI. Courses are composed of reusable content blocks and organized into thematic collections.",
-            "The goal is to simplify course production without requiring technical knowledge.",
-        ]
-    },
-
-    {
-        id: "15",
-        title: "Wash World - Mobile App",
-        year: 2025,
-        mainImage: "/images/no-img.jpg",
-        images: [],
-        technologies: [ "React Native", "Expo Router", "Nest.js", "PostgreSQL" ],
-        comments: [
-            "TO BE ADDED",
-            "2025 / Exam project",
-        ]
-    },
 
     
 ];
