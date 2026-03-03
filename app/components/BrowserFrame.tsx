@@ -43,8 +43,13 @@ export default function BrowserFrame({ title = '', children }: BrowserFrameProps
                             <div className="w-3 h-3 rounded-full bg-yellow-500" />
                             <div className="w-3 h-3 rounded-full bg-green-500" />
                         </div>
-                        <div className="text-sm font-medium text-gray-300">{title}</div>
-                        <div className="w-4" />
+                        <div className="text-sm text-gray-300 uppercase font-semibold" >
+                            {
+                                React.isValidElement(children) && (children as React.ReactElement).type === 'img' ? (
+                                    <span>Image</span>
+                                ) : <span>Video</span>
+                            }
+                        </div>
                     </div>
 
                     {/* Content area */}

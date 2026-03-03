@@ -80,10 +80,9 @@ export const projects: ProjectParams[] = [
         technologies: ["Svelte", "Node.js", "Express", "MongoDB", "Tailwind"],
         comments: [
             "2023 / Internal tool for AGC Bio",
-            "Created a digital floor plan solution for AGC Biologics as part of my student assistant role",
-            "Responsibilities included frontend / backend development, database design, and CI/CD pipeline implementation",
-            "Dynamic creation of floor plans and rooms",
-            "Dynamic search and filtering of rooms/instruments",
+            "Fully interactive digital solution used across the facility",
+            "Powerful search & filtering lets staff instantly locate any room or instrument on the map",
+            "Built end-to-end — from database architecture and REST API to a responsive Svelte frontend"
         ],
         link: "https://go.screenpal.com/watch/c0Qo3pVCaPH?redirect=true"    
     },
