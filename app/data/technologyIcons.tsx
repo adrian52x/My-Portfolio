@@ -1,5 +1,5 @@
 import { FaReact, FaNodeJs, FaDatabase, FaJsSquare, FaSync, FaExchangeAlt, FaJava, FaLeaf, FaPython, FaHtml5, FaCss3, FaDiscord } from 'react-icons/fa';
-import { SiTailwindcss, SiExpress, SiMongodb, SiNextdotjs, SiStripe, SiSvelte, SiVuedotjs, SiNestjs, SiTensorflow, SiKeras, SiSupabase, SiPostgresql, SiSocketdotio } from 'react-icons/si';
+import { SiTailwindcss, SiExpress, SiMongodb, SiNextdotjs, SiStripe, SiSvelte, SiVuedotjs, SiNestjs, SiTensorflow, SiKeras, SiSupabase, SiPostgresql, SiSocketdotio, SiDocker, SiMinio, SiExpo } from 'react-icons/si';
 
 export const technologyIcons: { [key: string]: React.ComponentType<{ className?: string }> } = {
     "React": FaReact,
@@ -27,4 +27,8 @@ export const technologyIcons: { [key: string]: React.ComponentType<{ className?:
     "PostgreSQL": SiPostgresql,
     "Websockets": SiSocketdotio,
     "Discord": FaDiscord,
+    "Docker": SiDocker,
+    "MinIO": SiMinio,
+    "React Native": FaReact,
+    "Expo Router": SiExpo,
 };

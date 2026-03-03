@@ -145,7 +145,7 @@ export const projects: ProjectParams[] = [
         images: ["/images/mediclean/dezinfect1.jpg", "/images/mediclean/dezinfect2.jpg", "/images/mediclean/mediclean2.jpg",  "/images/mediclean/mediclean3.jpg",  "/images/mediclean/mediclean4.jpg", "/images/mediclean/mediclean5.jpg", "/images/mediclean/mediclean6.jpg", "/images/mediclean/dezinfect3.jpg"],
         technologies: ["Next.js", "Tailwind", "Supabase", "PostgreSQL"],
         comments: [
-            "2025 / Real project for a client", 
+            "2025 / Freelance project", 
             "www.dezinfect.md",
             "E-commerce website for disinfectants, cleaning products and medical equipment",
         ],
@@ -185,12 +185,12 @@ export const projects: ProjectParams[] = [
     {
         id: "12",
         title: "DREAM BAR",
-        year: 2025,
+        year: 2026,
         mainImage: "/images/dreambar/dreambar.jpg",
-        images: ["/images/dreambar/dreambar.jpg", "/images/dreambar/dreambar2.jpg"],
+        images: ["/images/dreambar/dreambar.jpg", "/images/dreambar/dreambar3.jpg", "/images/dreambar/dreambar2.jpg", "/images/dreambar/dreambar4.jpg"],
         technologies: ["React", "Tailwind"],
         comments: [
-            "2025 / Real project for a client", 
+            "2026 / Freelance project", 
             "Digital menu website for a local business in Moldova",
             "Interactive menu with categories, pricing, and modern design",
             "Mobile-responsive layout for customer convenience",
@@ -199,7 +199,7 @@ export const projects: ProjectParams[] = [
     },
     {
         id: "10",
-        title: "C19 Test Center",
+        title: "C-19 Test Center",
         year: 2020,
         mainImage: "/images/no-img.jpg",
         images: ["/images/c19.png"],
@@ -210,6 +210,33 @@ export const projects: ProjectParams[] = [
             "Developed using Java Spring Boot and Thymeleaf",
             "Implemented basic CRUD operations for appointments",
             "Role-based access control for users",
+        ]
+    },
+
+        {
+        id: "14",
+        title: "Modular authoring system (Ramboll)",
+        year: 2026,
+        mainImage: "/images/ramboll/ramboll3.jpg",
+        images: ["/images/ramboll/ramboll1.jpg", "/images/ramboll/ramboll2.jpg", "/images/ramboll/ramboll3.jpg", "/images/ramboll/ramboll4.jpg"],
+        technologies: [ "React", "Next.js", "Nest.js", "PostgreSQL", "Docker", "MinIO" ],
+        comments: [
+            "Prototype developed as a bachelor project in collaboration with Ramboll — Incept Sustainability Team", 
+            "The platform lets authors build structured e-learning content from scratch through a guided UI. Courses are composed of reusable content blocks and organized into thematic collections.",
+            "The goal is to simplify course production without requiring technical knowledge.",
+        ]
+    },
+
+    {
+        id: "15",
+        title: "Wash World - Mobile App",
+        year: 2025,
+        mainImage: "/images/no-img.jpg",
+        images: [],
+        technologies: [ "React Native", "Expo Router", "Nest.js", "PostgreSQL" ],
+        comments: [
+            "TO BE ADDED",
+            "2025 / Exam project",
         ]
     },
 
