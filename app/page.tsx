@@ -74,8 +74,8 @@ export default function Home() {
                                     <div>~/</div> 
                                     <div>education&#36;</div>
                                 </div>
-                                <div className="text-orange-300">&#91;"AP Computer Science - Københavns Erhvervsakademi"&#93;</div>
-                                <div className="text-orange-300">"Top Up Web Development - Copenhagen Business Academy"&#93;</div>
+                                <div className="text-orange-300">&#91;"AP - Computer Science",</div>
+                                <div className="text-orange-300">"BSc - Web Development - <a href="https://www.ek.dk/" target="_blank" rel="noopener noreferrer" className="hover:underline">Erhvervsakademi Kbh</a>"&#93;</div>
                             </div>
 
                             <div className="skills">
