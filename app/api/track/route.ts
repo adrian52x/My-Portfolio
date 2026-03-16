@@ -6,6 +6,7 @@ interface TrackRequestBody {
   eventType?: EventType;
   projectId?: string;
   path?: string;
+  visitorSource?: string;
 }
 
 const allowedEventTypes = new Set<EventType>(["home_visit", "project_open"]);
@@ -33,36 +34,27 @@ function getDeviceType(userAgent: string) {
   return "desktop";
 }
 
-function getSourceDetails(request: NextRequest) {
-  const referer = request.headers.get("referer");
+function normalizeSource(value: string) {
+  return value.trim().toLowerCase().replace(/\s+/g, "-");
+}
 
+function getFallbackVisitorSource(request: NextRequest) {
+  const referer = request.headers.get("referer");
   if (!referer) {
-    return {
-      referer,
-      sourceType: "direct" as const,
-      sourceHost: null,
-      sourceUrl: null,
-    };
+    return "direct";
   }
 
   try {
     const refererUrl = new URL(referer);
     const requestHost = request.headers.get("host");
-    const sourceType = refererUrl.host === requestHost ? "internal" : "external";
 
-    return {
-      referer,
-      sourceType,
-      sourceHost: refererUrl.host,
-      sourceUrl: refererUrl.toString(),
-    };
+    if (refererUrl.host === requestHost) {
+      return "direct";
+    }
+
+    return normalizeSource(refererUrl.hostname.replace(/^www\./, ""));
   } catch {
-    return {
-      referer,
-      sourceType: "external" as const,
-      sourceHost: null,
-      sourceUrl: referer,
-    };
+    return "direct";
   }
 }
 
@@ -102,10 +94,11 @@ export async function POST(request: NextRequest) {
   const userAgent = request.headers.get("user-agent") ?? "";
   const forwardedFor = request.headers.get("x-forwarded-for");
   const realIp = request.headers.get("x-real-ip");
+  const referer = request.headers.get("referer");
   const ipAddress = getClientIp(request);
   const deviceType = getDeviceType(userAgent);
-  const { referer, sourceType, sourceHost, sourceUrl } = getSourceDetails(request);
   const isOwner = Boolean(ipAddress && ownerIpAddress && ipAddress === ownerIpAddress);
+  const visitorSource = body.visitorSource ? normalizeSource(body.visitorSource) : getFallbackVisitorSource(request);
 
   const response = await fetch(`${supabaseUrl}/rest/v1/visitor_events`, {
     method: "POST",
@@ -122,9 +115,7 @@ export async function POST(request: NextRequest) {
       ip_address: ipAddress,
       user_agent: userAgent,
       device_type: deviceType,
-      source_type: sourceType,
-      source_host: sourceHost,
-      source_url: sourceUrl,
+      visitor_source: visitorSource,
       metadata: {
         referer,
         forwarded_for: forwardedFor,
