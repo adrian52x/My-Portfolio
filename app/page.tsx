@@ -6,6 +6,7 @@ import TypingEffect from "./components/TypingEffect";
 import TerminalInput from "./components/terminal-Input";
 import { Suspense } from "react";
 import ProjectsGridSkeleton from './components/ProjectsGridSkeleton';
+import VisitTracker from "./components/VisitTracker";
  
 const quantico = Quantico({
   weight: '400',
@@ -16,6 +17,7 @@ export default function Home() {
 
     return (
         <>
+            <VisitTracker eventType="home_visit" path="/" />
             {/* <div className=" layout"> */}
             <div className={`layout ${quantico.className}`}>
                     <div className="terminal bg-white/10  mb-4">

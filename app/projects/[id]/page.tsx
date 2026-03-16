@@ -4,6 +4,7 @@ import { FaArrowLeft } from 'react-icons/fa'
 import Link from 'next/link';
 import ScrollToTopButton from '@/app/components/ScrollToTopButton';
 import { technologyIcons } from '@/app/data/technologyIcons';
+import VisitTracker from '@/app/components/VisitTracker';
 
 interface ProjectPageProps {
     params: Promise<{
@@ -19,6 +20,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
     return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+        <VisitTracker eventType="project_open" path={`/projects/${id}`} projectId={project?.title} />
         
         {/* Back Button */}
         <Link href="/">
