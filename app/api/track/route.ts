@@ -33,6 +33,39 @@ function getDeviceType(userAgent: string) {
   return "desktop";
 }
 
+function getSourceDetails(request: NextRequest) {
+  const referer = request.headers.get("referer");
+
+  if (!referer) {
+    return {
+      referer,
+      sourceType: "direct" as const,
+      sourceHost: null,
+      sourceUrl: null,
+    };
+  }
+
+  try {
+    const refererUrl = new URL(referer);
+    const requestHost = request.headers.get("host");
+    const sourceType = refererUrl.host === requestHost ? "internal" : "external";
+
+    return {
+      referer,
+      sourceType,
+      sourceHost: refererUrl.host,
+      sourceUrl: refererUrl.toString(),
+    };
+  } catch {
+    return {
+      referer,
+      sourceType: "external" as const,
+      sourceHost: null,
+      sourceUrl: referer,
+    };
+  }
+}
+
 export async function POST(request: NextRequest) {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -71,7 +104,7 @@ export async function POST(request: NextRequest) {
   const realIp = request.headers.get("x-real-ip");
   const ipAddress = getClientIp(request);
   const deviceType = getDeviceType(userAgent);
-  const referer = request.headers.get("referer");
+  const { referer, sourceType, sourceHost, sourceUrl } = getSourceDetails(request);
   const isOwner = Boolean(ipAddress && ownerIpAddress && ipAddress === ownerIpAddress);
 
   const response = await fetch(`${supabaseUrl}/rest/v1/visitor_events`, {
@@ -89,6 +122,9 @@ export async function POST(request: NextRequest) {
       ip_address: ipAddress,
       user_agent: userAgent,
       device_type: deviceType,
+      source_type: sourceType,
+      source_host: sourceHost,
+      source_url: sourceUrl,
       metadata: {
         referer,
         forwarded_for: forwardedFor,
