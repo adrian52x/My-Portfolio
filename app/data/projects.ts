@@ -166,7 +166,7 @@ export const projects: ProjectParams[] = [
     },
     {
         id: "13",
-        title: "AI Surveillance System",
+        title: "Homelab - AI Surveillance System",
         year: 2025,
         mainImage: "/images/camera-ai/camera1.jpg",
         images: ["/images/camera-ai/camera1.jpg", "/images/camera-ai/camera2.jpg", "/images/camera-ai/camera3.jpg"],

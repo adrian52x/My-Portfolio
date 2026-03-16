@@ -33,7 +33,7 @@ export default function Home() {
                         <div className="terminal-content p-4 space-y-4">
                             <div className="flex space-x-2">
                                 <div>~/&#36;</div> 
-                                <TypingEffect phrases={['Adrian Enachi', 'Software Engineer']} />
+                                <TypingEffect phrases={['Adrian Enachi', 'Software Engineer / Full-Stack Developer']} />
                             </div>
                             <div className="location">
                                 <div className="flex">
@@ -63,14 +63,6 @@ export default function Home() {
                                 </div>
                             </div>
 
-                            {/* <div className="interests">
-                                <div className="flex">
-                                    <div>~/</div> 
-                                    <div>interests&#36;</div>
-                                </div>
-                                <div className="text-orange-300">&#91;"text, text, text, text"&#93;</div>
-                            </div> */}
-
                             <div className="education">
                                 <div className="flex">
                                     <div>~/</div> 
@@ -87,6 +79,15 @@ export default function Home() {
                                 </div>
                                 <div className="text-orange-300">&#91;"Web/Mobile Development", "Frontend/Backend", "DevOps/Cloud", "Linux", "Database Design" &#93;</div>
                             </div>
+
+                            <div className="interests">
+                                <div className="flex">
+                                    <div>~/</div> 
+                                    <div>interests&#36;</div>
+                                </div>
+                                <div className="text-orange-300">&#91;"CyberSecurity, Homelab Systems, Applied AI, Creative UIs"&#93;</div>
+                            </div>
+
                             <hr />
                             
                             <TerminalInput/>
