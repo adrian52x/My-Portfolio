@@ -40,7 +40,7 @@ export default function Home() {
                                     <div>~/</div> 
                                     <div>currentLocation&#36;</div>
                                 </div>
-                                <div className="text-orange-300">"Copenhagen, Denmark"</div>
+                                <div className="text-orange-300">"Copenhagen, DK"</div>
                             </div>
 
                             <div className="contactInfo">
