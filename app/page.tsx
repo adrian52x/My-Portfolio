@@ -85,7 +85,7 @@ export default function Home() {
                                     <div>~/</div> 
                                     <div>interests&#36;</div>
                                 </div>
-                                <div className="text-orange-300">&#91;"CyberSecurity, Homelab Systems, Applied AI, Creative UIs"&#93;</div>
+                                <div className="text-orange-300">&#91;"CyberSecurity, Homelab Systems, Applied AI, IoT"&#93;</div>
                             </div>
 
                             <hr />
