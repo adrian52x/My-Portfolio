@@ -98,6 +98,11 @@ export async function POST(request: NextRequest) {
   const ipAddress = getClientIp(request);
   const deviceType = getDeviceType(userAgent);
   const isOwner = Boolean(ipAddress && ownerIpAddress && ipAddress === ownerIpAddress);
+
+  if (isOwner) {
+    return NextResponse.json({ ok: true, skipped: true });
+  }
+
   const visitorSource = body.visitorSource ? normalizeSource(body.visitorSource) : getFallbackVisitorSource(request);
 
   const response = await fetch(`${supabaseUrl}/rest/v1/visitor_events`, {
@@ -120,7 +125,6 @@ export async function POST(request: NextRequest) {
         referer,
         forwarded_for: forwardedFor,
         real_ip: realIp,
-        is_owner: isOwner,
       },
     }),
   });
